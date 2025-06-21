@@ -16,8 +16,10 @@ resource "aws_lambda_function" "this" {
       mode = "Active"
     }
   }
-  depends_on = [aws_cloudwatch_log_group.lambda_logs]
-  depends_on = [aws_iam_role.lambda_exec]
+  depends_on = [
+    aws_cloudwatch_log_group.lambda_logs,
+    aws_iam_role.lambda_exec
+  ]
 }
 
 
