@@ -17,3 +17,7 @@ variable "lambda_image_uri" {
     description = "lambda_image_uri"
     type        = string
     }
+
+variable "enable_xray" {
+  type = bool
+}

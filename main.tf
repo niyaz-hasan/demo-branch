@@ -21,6 +21,7 @@ module "lambda" {
   lambda_image_uri    = var.lambda_image_uri
   subnet_ids          = module.network.private_subnet_ids
   security_group_ids  = [module.security_group.lambda_sg_id]
+  enable_xray         = true
 }
 
 module "api_gateway" {
